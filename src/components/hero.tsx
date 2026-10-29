@@ -18,18 +18,20 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f3fafc_0%,#ffffff_62%)]">
-      <div className={`${pageWrap} grid items-center gap-10 py-10 sm:py-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16 lg:py-16`}>
+      <div className={`${pageWrap} grid items-center gap-8 py-8 sm:gap-10 sm:py-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16 lg:py-16`}>
         <div className="fade-up">
-          <p className="text-xs font-semibold tracking-[0.22em] text-teal-ink uppercase">Jammu · Multi-specialty clinic</p>
-          <h1 className="mt-4 max-w-xl text-[2.55rem] leading-[1.05] font-semibold tracking-tight text-slate-950 sm:text-6xl">
+          <p className="text-[11px] font-semibold tracking-[0.18em] text-teal-ink uppercase sm:text-xs sm:tracking-[0.22em]">
+            Jammu · Multi-specialty clinic
+          </p>
+          <h1 className="mt-3 max-w-xl text-[2.05rem] leading-[1.12] font-semibold tracking-tight text-slate-950 sm:mt-4 sm:text-6xl sm:leading-[1.05]">
             Healthcare That Cares.
             <span className="mt-1 block text-navy">Medicine That Heals.</span>
           </h1>
-          <p className="mt-5 max-w-lg text-base leading-relaxed text-slate-600 sm:text-lg">
+          <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-slate-600 sm:mt-5 sm:text-lg">
             Expert specialists, diagnostic lab, and personal care available right here in Jammu.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
             <button
               type="button"
               onClick={() => requestBooking()}
@@ -49,14 +51,14 @@ export function Hero() {
             </ContactLink>
           </div>
 
-          <dl className="mt-10 grid grid-cols-3 gap-3 border-t border-slate-200/80 pt-6">
+          <dl className="mt-6 grid grid-cols-3 divide-x divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white sm:mt-10 sm:divide-x-0 sm:gap-3 sm:overflow-visible sm:rounded-none sm:border-0 sm:border-t sm:bg-transparent sm:pt-6">
             {proof.map((item) => (
-              <div key={item.label}>
-                <dt className="flex items-center gap-1.5 text-xl font-semibold tracking-tight text-navy sm:text-2xl">
-                  <item.icon className="h-4 w-4 text-teal-ink" aria-hidden="true" />
+              <div key={item.label} className="px-2 py-3 text-center sm:px-0 sm:py-0 sm:text-left">
+                <dt className="flex items-center justify-center gap-1.5 text-lg font-semibold tracking-tight text-navy sm:justify-start sm:text-2xl">
+                  <item.icon className="hidden h-4 w-4 text-teal-ink sm:block" aria-hidden="true" />
                   {item.value}
                 </dt>
-                <dd className="mt-1 text-xs leading-snug text-muted sm:text-sm">{item.label}</dd>
+                <dd className="mt-0.5 text-[11px] leading-snug text-muted sm:mt-1 sm:text-sm">{item.label}</dd>
               </div>
             ))}
           </dl>
@@ -76,10 +78,10 @@ export function Hero() {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/55 via-transparent to-transparent" />
           </div>
 
-          <div className="absolute inset-x-4 bottom-4 flex items-center justify-between gap-3 rounded-2xl border border-white/70 bg-white/95 px-4 py-3 shadow-lg backdrop-blur-md sm:inset-x-5 sm:bottom-5">
+          <div className="absolute inset-x-3 bottom-3 flex items-center justify-between gap-3 rounded-2xl border border-white/70 bg-white/95 px-3.5 py-2.5 shadow-lg backdrop-blur-md sm:inset-x-5 sm:bottom-5 sm:px-4 sm:py-3">
             <div>
-              <p className="text-sm font-semibold text-navy">Same-day slots, when available</p>
-              <p className="mt-0.5 text-xs text-muted">Care that starts by listening</p>
+              <p className="text-[13px] font-semibold text-navy sm:text-sm">Same-day slots, when available</p>
+              <p className="mt-0.5 text-[11px] text-muted sm:text-xs">Care that starts by listening</p>
             </div>
             <span className="hidden shrink-0 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800 sm:inline">
               Consults in Jammu
